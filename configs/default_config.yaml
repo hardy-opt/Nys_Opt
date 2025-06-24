@@ -1,0 +1,31 @@
+# Default Configuration Template
+
+training:
+  epochs: 100
+  batch_size: 32
+  test_batch_size: 100
+  validation_split: 0.1
+
+optimizer:
+  name: "NysNewton"
+  lr: 0.01
+  rank: 50
+  damping: 1.0e-6
+  update_freq: 10
+  momentum: 0.9
+
+logging:
+  log_dir: "./results/default_experiment"
+  log_interval: 10
+  save_checkpoints: true
+  checkpoint_interval: 10
+
+model:
+  save_model: true
+  save_path: "./results/default_experiment/model.pt"
+
+data:
+  dataset: "synthetic"
+  n_features: 100
+  n_samples: 1000
+  noise_level: 0.1

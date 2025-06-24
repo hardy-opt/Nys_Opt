@@ -1,0 +1,26 @@
+# CIFAR-10 Experiment Configuration
+
+training:
+  epochs: 50
+  batch_size: 128
+  test_batch_size: 100
+
+optimizer:
+  name: "NysNewton"
+  lr: 0.001
+  rank: 100
+  damping: 1.0e-6
+  weight_decay: 1.0e-4
+
+data:
+  augmentation: true
+  normalize: true
+
+logging:
+  log_dir: "./results/cifar10_nys_newton"
+  log_interval: 50
+
+model:
+  architecture: "ResNet18"
+  save_model: true
+  save_path: "./results/cifar10_nys_newton/model.pt"

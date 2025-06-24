@@ -1,0 +1,20 @@
+# MNIST Experiment Configuration
+
+training:
+  epochs: 10
+  batch_size: 64
+  test_batch_size: 1000
+
+optimizer:
+  name: "NysNewton"  # Options: NysNewton, Adam, SGD
+  lr: 0.01
+  rank: 50           # For NysNewton only
+  damping: 1.0e-6    # For NysNewton only
+
+logging:
+  log_dir: "./results/mnist_nys_newton"
+  log_interval: 100
+
+model:
+  save_model: true
+  save_path: "./results/mnist_nys_newton/model.pt"
